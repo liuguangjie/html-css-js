@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <style>
+            a:link{text-decoration: none; color: black;}
+            a:visited{text-decoration: line-through; color: green;}
+            a:hover{text-decoration: underline; color: blue;}
+            a:active{text-decoration: overline; color: red;}
+            lable{
+                line-height: 50px;
+            }
+            input {
+                line-height: 30px;
+                border: 1px solid yellow;
+            }
+            input:focus {
+                background:  blue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- 伪元素 -->
+        <div class="link">
+            <a href="http://www.baidu.com" target="_blank">网页设计</a>
+            <a href="http://www.baidu.com" target="_blank">大数据</a>
+            <a href="http://www.baidu.com" target="_blank">人工智能</a>
+            <a href="http://www.baidu.com" target="_blank">java</a>
+            <a href="http://www.baidu.com" target="_blank">C++</a>
+        </div>
+        <br/>
+        <div class="input_text">
+            <lable>账号:<input type="text"  name="username"/></lable> <br/>
+            <lable>密码:<input type="password"  name="password"/></lable>
+        </div>
+    </body>
+</html>

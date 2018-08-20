@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+ .ul a{
+    color: #333;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 700; /**字体粗细*/
+    margin-left: 18px;
+}
+.ul {
+    margin-left: 74%;
+    margin-top: 20px;
+}
+.ul a:hover {
+    color: blue;
+}
+.qixi_img {
+    text-align: center;
+    margin-top: 141.5px;
+}
+/**input 框 样式 */
+.search_input {
+    line-height: 35px;
+    padding-left: 5px;
+    width: 526px;
+    height: 36px;
+    /* outline: 0; */
+    outline-color: initial;
+    outline-style: initial;
+    /* outline-width: 1px; */
+    /* border: 1px  */
+}
+.search_input:focus {
+    border: 1px solid blue;
+
+
+
+}
+.search_area {
+    text-align: center;
+    margin-top: 25px;
+    margin-right: 120px;
+}
+
+.soutu-btn {
+    z-index:1;
+    background: #fff url('https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/img/camera_new_5606e8f.png') no-repeat;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 59.3%;
+    height: 20px;
+    width: 18px;
+    cursor: pointer;
+
+}
+.soutu-btn:hover {
+    z-index:1;
+    background: #fff url('https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/img/camera_new_5606e8f.png') no-repeat;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 59.3%;
+    height: 20px;
+    width: 18px;
+    background-position:0 -20px;
+    cursor: pointer;
+}
+
+.btn-1 {
+    position: absolute;
+    height: 36px;
+    width: 100px;
+    background: #3385ff;
+    border: 0;
+    color: #fff;
+    font-size: 15px;
+    outline: medium;
+    cursor: pointer;
+}
+.btn-1:hover {
+    box-shadow: 1px 1px 1px #ccc;
+    
+    background: #317ef3;
+}
+
+/**底部 二维码*/
+.qrcode {
+    position: absolute;
+    margin-top: 414px;
+    text-align: center;
+    width: 100%;
+
+}
+.qrcode-img {
+    background: url('https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_efde696.png') 0 0 no-repeat;
+    width: 60px;
+    height: 60px;
+    margin-left: 48.45%;
+    color: #ccc;
+}
+
+/** 二维码文本*/
+.qrcode .qrcode-text {
+    color: #333;
+    font-size: 12px;
+    line-height: 28px;
+}
+
+/*** 底部信息  推广设置等... */
+.settings {
+    margin-top: 14px;
+}
+.settings a {
+    margin-left: 21px;
+    color: #999;
+    font-size: 12px;
+}
+
+.about-baidu {
+    font-size: 13px;
+    margin-top: 8px;
+    color: #999;
+}
+
+.about-baidu a {
+    color: #999;
+    font-size: 12px;
+}
+
+.about-baidu .beian {
+    margin-left: 50px;
+}

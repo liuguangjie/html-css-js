@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title>CSS截图图片的几种方式</title>
+        <style>
+            * {
+                padding: 0px;
+                margin: 0px;
+            }
+            img {
+                width: 550px;
+                height: 831px;
+            }
+
+            .div_bg{
+                width: 550px;
+                height: 113px;
+                background-image: url('px.jpg');
+                background-repeat: no-repeat;
+                background-position: 0px -599px;
+            }
+            .img1{
+                width: 550px;
+                background-image: url('px.jpg');
+                clip: rect(599px 550px 712px 0px);
+                position: absolute;
+                margin-top: -599px;
+            }
+
+            .div_img
+            {
+                width: 550px;
+                height: 113px;
+                overflow: hidden;
+            }
+            .img2
+            {
+                margin: -599px 0 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 文章地址 https://blog.csdn.net/u012324101/article/details/51321576 -->
+        <!-- <img src="px.jpg"  />
+
+        <ul>
+            <li>DIV 使用background-position：Xpx Ypx (图片左上角坐标) 配合width和height</li>
+        </ul>
+        <div class="div_bg"></div>
+        
+        <ul>
+            <li>IMG 使用clip: rect（左上Y 右下X 右下Y 左上X） 配合width和margin-top</li>
+
+        </ul>
+
+        <img class="img1" src="px.jpg" /> -->
+
+        <ul>
+            <li>
+                    DIV+IMG 使用margin属性和overflow属性控制
+            </li>
+        </ul>
+        <div class="div_img">
+                <img class="img2" src="px.jpg" />
+        </div>
+
+    </body>
+</html>
