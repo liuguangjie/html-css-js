@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title>微信语音html+css+js实现</title>
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+    </head>
+
+    <body >
+        <!--  http://resource.haorooms.com/showdemo.html?id=279 -->
+            <style>
+                .add_yuyin {
+                    border-top: none;
+                }
+            </style>
+            <form >
+                <div class="askinput" style="height:auto;">
+                    <div class="add_yuyin">
+                        <div class="r_yuyin" style="width:46%" data-time="46">46''
+                            <audio preload="auto" hidden="true">
+                                <source src="test.mp3" type="audio/mpeg">
+                            </audio>
+                            <s></s>
+                        </div>
+                        <div class="deleteicon"></div>
+                    </div>
+                    <div class="add_yuyin">
+                        <div class="r_yuyin" style="width:46%" data-time="46">46''
+                            <audio preload="auto" hidden="true">
+                                <source src="test.mp3" type="audio/mpeg">
+                            </audio>
+                            <s class=""></s>
+                        </div>
+                        <div class="deleteicon"></div>
+                    </div>
+        
+                    <div class="add_yuyin luzhiyy" id="addluyin">
+                        <s></s>添加语音
+                    </div>
+                </div>
+                <input type="submit" value="提交" class="tijaobtn">
+            </form>
+           
+        
+          
+        
+            <script type="text/javascript">
+                $(function () {
+                    var dshiqi = null;
+                    //录音播放
+                    $(".askinput").on("click", ".r_yuyin", function () {
+                        //先暂停其他的
+                        $(this).parent(".add_yuyin").siblings().find("audio")[0].pause();
+                        $(this).parent(".add_yuyin").siblings().find("s").removeClass("bofang");
+                        let audio = $(this).find("audio")[0],
+                            time = $(this).data("time");
+                        if (audio.paused) {
+                            audio.play(); //audio.play();// 这个就是播放
+                            $(this).find("s").addClass("bofang");
+                            dshiqi = setTimeout(function () { //dshiqi是外层定义好的一个变量！
+                                $(this).find("s").removeClass("bofang"); //播放完毕去除动画
+                            }, time * 1000)
+                        } else {
+                            audio.pause(); // 这个就是暂停
+                            $(this).find("s").removeClass("bofang");
+                            clearTimeout(dshiqi);
+                        }
+                    })
+                })
+            </script>
+        
+        
+        
+        </body>
+</html>

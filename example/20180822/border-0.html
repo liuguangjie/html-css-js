@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>boder应用场景</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .test-0 {
+            border-style: solid; /** solid dotted*/
+            color: blue;
+            width: 20%;
+            display: none;
+        }
+        .test-box-1 {
+            margin: 10%;
+            position: relative;
+            /* width: 150px;
+            height: 150px; */
+            /* overflow: hidden; */
+            display: none;
+            
+        }
+        .test-box-1 .min-box {
+            width: 100px;
+            height: 160px;
+            z-index: 2;
+            border: 149px  dotted #cd0000;
+
+        }
+        .p1 {
+            width: 398px;
+            height: 305px;
+            background: #cd0000;
+            position: relative;
+            top: -390px;
+        }
+        .p2 {
+            width: 231px;
+            height: 458px;
+            background: #cd0000;
+            position: relative;
+            
+            top: -763px;
+            left: 85px;
+        }
+        .box-style {
+            margin: 10%;
+            width: 120px;
+            height: 20px;
+            border-top: 60px double;
+            border-bottom: 20px solid;
+            color: #000;
+            display: none;
+        }
+        .add {
+            /* width: 50px;
+            height: 100px; */
+            color: #ccc;
+            transition: color .25s;
+            border: 1px solid;
+        }
+        .add::before {
+            border-top: 10px solid;
+        }
+        .add::after {
+            border-left: 10px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-0">
+        boder应用场景 哟
+    </div>
+    <hr/>
+    <!-- 画园 -->
+    <div class="test-box-1">
+        
+        <div class="min-box">
+            
+        </div>
+        <div class="p1"></div>
+        <div class="p2"></div>
+    </div>
+    <!-- border: double属性demo -->
+    <div class="box-style">
+
+    </div>
+    <!-- border 应用1 -->
+    <div class="apply"></div>
+        <a href="javascript:" class="add"></a>
+    
+
+</body>
+</html>

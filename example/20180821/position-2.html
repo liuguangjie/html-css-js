@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>一个简单的 div + css 布局 3级栏目</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="position-2.css" />
+</head>
+<body>
+
+    <!-- 
+        需求:
+        不用js 实现 css 布局 让 3级栏目 显示的高度和 二级栏目占的高度成正比
+        
+
+    -->
+
+    <div class="page">
+        <!--导航-->
+        <div class="nav">
+            <div class="nav-li">
+                <div class="tit">---java---</div> 
+                <ul>
+                    <li >
+                        基础
+                        <div class="list-3">
+                            <div class="list-dom">基础java三级栏目1</div>
+                            <div class="list-dom">基础java三级栏目2</div>
+                            <div class="list-dom">基础java三级栏目3</div>
+                        </div>
+                    </li>
+                </ul>
+                <ul >
+                    <li >
+                        高级
+                        <div class="list-3">
+                                <div class="list-dom">高级java三级栏目1</div>
+                                <div class="list-dom">高级java三级栏目2</div>
+                                <div class="list-dom">高级java三级栏目3</div>
+                            </div>
+                    </li>
+                </ul>
+                <ul >
+                    <li >
+                        面向对象
+                        <div class="list-3">
+                                <div class="list-dom">面向对象三级栏目1</div>
+                                <div class="list-dom">面向对象三级栏目2</div>
+                                <div class="list-dom">面向对象三级栏目3</div>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-li">
+                <div class="tit">---css---</div> 
+                <ul>
+                        <li >
+                            布局
+                        </li>
+                    </ul>
+                    <ul >
+                        <li >
+                            流布局
+                        </li>
+                    </ul>
+                    <ul >
+                        <li >
+                            实战
+                        </li>
+                    </ul>
+            </div>
+            <div class="nav-li">
+                <div class="tit">---html---</div>
+                <ul>
+                        <li >
+                            基础语法
+                        </li>
+                    </ul>
+                    <ul >
+                        <li >
+                            html游戏
+                        </li>
+                    </ul>
+                    <ul >
+                        <li >
+                            大量资料和实战
+                        </li>
+                    </ul>
+            </div>
+            <div class="nav-li">
+                <div class="titi">---javascript---</div>
+                <ul>
+                        <li >
+                            基础
+                        </li>
+                    </ul>
+                    <ul >
+                        <li >
+                            高级
+                        </li>
+                    </ul>
+                    <ul >
+                        <li >
+                            面向对象
+                        </li>
+                    </ul>
+            </div>
+            <div class="nav-li">
+                <div class="tit">---c++---</div> 
+                    <ul>
+                            <li >
+                                基础
+                            </li>
+                        </ul>
+                        <ul >
+                            <li >
+                                高级
+                            </li>
+                        </ul>
+                        <ul >
+                            <li >
+                                面向对象
+                            </li>
+                        </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

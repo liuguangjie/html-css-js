@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,a,code,em,img,q,small,strong,dd,dl,dt,li,ol,ul,fieldset,form,label,table,tbody,tr,th,td,input{margin:0;padding:0;border:0}
+body{font-size:.24rem;max-width:1080px;margin:0 auto;background:#f6f6f6;font-family:'Microsoft YaHei','STHeiti',Helvetica,Arial,sans-serif;-webkit-text-size-adjust:none}
+a,a:active,a:hover,a:focus,a:visited{text-decoration:none}
+a,img{-webkit-touch-callout:none}
+*{-webkit-tap-highlight-color:rgba(255,255,255,0)}
+ol,ul,li{list-style:none}
+cite{font-style: normal;}
+textarea,input[type="password"],input[type="text"]{resize:none;outline:0;-webkit-appearance:none;white-space:pre-wrap;word-wrap:break-word;background:#fff}
+ input[type="search"]::-webkit-search-cancel-button{ -webkit-appearance: none;height: .25rem; width: .25rem;border-radius: 8px;background:url("../images/searchclose.png") no-repeat 0 0;background-size: .25rem .25rem;}
+input,textarea,select{outline:none;-webkit-appearance: none; }
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+p{background-image:url(about:blank);background-color:transparent;word-break:break-all}
+body{width:6.4rem}
+
+.tijaobtn{width:90%;height:.8rem;
+    background-color:#f16461;
+    text-align: center;
+    line-height: .8rem;
+    color:#fff;
+    margin:0rem auto;
+    display: block;
+    border-radius: 6px;
+    font-size:.3rem;
+}
+.tijaobtn[disabled]{background-color:#f4cac9;}
+/** askpage **/
+.askinput{margin:.23rem 0;width:100%;background-color:#fff;height:2.8rem;border-top:1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5;overflow: hidden;}
+.askinput textarea{border:0;width:5.95rem;height:2.35rem;padding:.22rem 0  0 .24rem;font-size:.26rem;}
+
+/**  zjreplay**/
+.add_yuyin{height:.85rem;border-top:1px solid #e5e5e5;margin-left:.28rem;line-height: .85rem;width:100%;;float:left;}
+
+.add_yuyin .r_yuyin{margin:.1rem 0;color:#999999;height:.6rem;line-height:.6rem;padding:0 .2rem;background-color:#fff3ea;border:1px solid #ffe0c9;border-radius: 6px;max-width: 75%;min-width: 18%;position: relative;float:left;}
+.add_yuyin .r_yuyin s{width:.4rem;height:.4rem;position:absolute;right:.2rem;top:.09rem;background:url("../imgs/icon.png") no-repeat -7.11rem -3.62rem;background-size:14.57rem 4.86rem;}
+.add_yuyin .deleteicon{width:.55rem;height:.5rem;background:url("../imgs/icon.png") no-repeat -6.17rem -3.41rem;background-size:14.57rem 4.86rem;margin-top:.12rem;margin-left:.1rem;float:left;}
+
+/** 播放录音的动画效果 **/
+@-webkit-keyframes bofang{
+    25% {
+       background-position:-.14rem -.07rem;
+    }
+    50% {
+       background-position:-.63rem -.07rem;
+    }
+    75% {
+       background-position:-1.08rem -.07rem;
+    }
+    100% {
+       background-position:-1.49rem -.07rem;
+    } 
+}
+@keyframes bofang{
+    25% {
+       background-position:-.14rem -.07rem;
+    }
+    50% {
+       background-position:-.63rem -.07rem;
+    }
+    75% {
+       background-position:-1.08rem -.07rem;
+    }
+    100% {
+       background-position:-1.49rem -.07rem;
+    } 
+}
+.add_yuyin .r_yuyin s.bofang{ background:url(../imgs/yuyin.png) no-repeat -.14rem -.07rem;-webkit-animation:bofang 1s steps(1) infinite;background-size:1.9rem .49rem;}
