@@ -34,6 +34,8 @@
     height: 218px;
     padding-top: 100px;
     background: #3b3b3b;
+
+    margin-top: 200px; /** */
 }
 
 .public-footer .footer-col {
@@ -48,6 +50,10 @@
 .public-footer .footer-col:last-child {
     margin-right: 0;
 }
+
+/* .public-footer .last-col {
+    margin-right: 0;
+} */
 
 .public-footer .footer-logo {
     width: 182px;

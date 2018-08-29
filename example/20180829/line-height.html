@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>深入理解行高</title>
+
+    <style type="text/css">
+		html, body {
+			font-size: 12px;
+		}
+ 
+		.test1 {
+			line-height: 12px;
+			font-size: 50px;
+			background-color: #f00;
+		}
+ 
+		.test2 {
+			line-height: 50px;
+			font-size:12px;
+			-webkit-text-size-adjust:none;
+			background-color: #ccc;
+		}
+ 
+		.test3 {
+			background-color: #f00;
+			line-height: 50px;
+			display: inline-block;
+		}
+	</style>
+
+</head>
+<body>
+    <p>啦啦啦</p><span>啦啦啦</span>
+	<p class="test1">我的行高为12px，但是字体大小为36px</p>
+	<p class="test2">我的行高为36px，但字体大小为12px</p>
+	<br />
+	<br />
+	<span class="test3">测试背景色，只有在内联块状化后，才会显示line-height那么高的红色。</span>
+	<br />
+	<br />
+ 
+	<p style="background-color: #ccc"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIoAAABXCAIAAABURUrCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKuSURBVHhe7doxcuowFIVhlZSUlCyBJVCyBEpKSnbAMlyyBEqWwTIoKSnJmfjiUcSYSYivdGTOVwU7mefRjyWZR7gLMeWhpjzUlIea8lBTHmrKQ015qCkPNeWhpjzUlIea8lBTHmrKQ015qCkPNeWhVibP6XRaLpeHw8FeS48yeWazWQhhMpnYa+mRO8/xeJzP52jTsqMP7V3VNI29/nhZ81wuF9wxViaE9XptJx66cvhht9vh9+3Ep8qaZ7vdtqMPaHO73ezEA5LYaWfIX8XKlykPZq14TsMUZyd+QrDNZmO/5KyKlS9TnnYv0FqtVna0H/otFgv7Azf2jxHLcYm4dWw8eua0nOI3ih0iluMSeUbker3adYSAhdCOEnMfL+y+bDyKjkiy+IGd4OZ7lfFTDtYSO1pCfAfDb9Y/Bo55kqecvt1aBvv93i6ini11yzFP/BBT6t2azGnPD8LkHPN080nB+ybZ0JfdNL7BK0/TNDYqRRdhuwKCDf17vMaue9uWmk+wwMTTmh2tjct1x48XRd6z8V4AqltyOsPnwUoznU5tYEq8bZ/b1DittYYfvmQ1tqO5xG1q3Askhs9jYxNC/seLkbUBxzz2Oov44wkYRxsYQ57k44nRtIG68yS7Z6h6I/Cs4jzxk2+r4McTTmrNg0erSj+E/pPhB7FbBs7nsx0a1POENqbZLDF8Hsz+Nmzfn94P+6W15JETRnnTdIbPg5vGRs4Z2lf0PzfvcVkh4u+zeRjT1vk1xwUcI+jxpbWRbZ1fc8wj/6c81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeYjd71+Dz3ZXj6A4AAAAAABJRU5ErkJggg==" alt=""></p>
+	<p>可以观察到上面图片下方有间距，这就是默认vertical-align要和隐匿节点的基线对齐导致的</p>
+	<br />
+	<br />
+	<p style="background-color: #ccc; text-align: center; height: 100px"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIoAAABXCAIAAABURUrCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKuSURBVHhe7doxcuowFIVhlZSUlCyBJVCyBEpKSnbAMlyyBEqWwTIoKSnJmfjiUcSYSYivdGTOVwU7mefRjyWZR7gLMeWhpjzUlIea8lBTHmrKQ015qCkPNeWhpjzUlIea8lBTHmrKQ015qCkPNeWhVibP6XRaLpeHw8FeS48yeWazWQhhMpnYa+mRO8/xeJzP52jTsqMP7V3VNI29/nhZ81wuF9wxViaE9XptJx66cvhht9vh9+3Ep8qaZ7vdtqMPaHO73ezEA5LYaWfIX8XKlykPZq14TsMUZyd+QrDNZmO/5KyKlS9TnnYv0FqtVna0H/otFgv7Azf2jxHLcYm4dWw8eua0nOI3ih0iluMSeUbker3adYSAhdCOEnMfL+y+bDyKjkiy+IGd4OZ7lfFTDtYSO1pCfAfDb9Y/Bo55kqecvt1aBvv93i6ini11yzFP/BBT6t2azGnPD8LkHPN080nB+ybZ0JfdNL7BK0/TNDYqRRdhuwKCDf17vMaue9uWmk+wwMTTmh2tjct1x48XRd6z8V4AqltyOsPnwUoznU5tYEq8bZ/b1DittYYfvmQ1tqO5xG1q3Askhs9jYxNC/seLkbUBxzz2Oov44wkYRxsYQ57k44nRtIG68yS7Z6h6I/Cs4jzxk2+r4McTTmrNg0erSj+E/pPhB7FbBs7nsx0a1POENqbZLDF8Hsz+Nmzfn94P+6W15JETRnnTdIbPg5vGRs4Z2lf0PzfvcVkh4u+zeRjT1vk1xwUcI+jxpbWRbZ1fc8wj/6c81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeYjd71+Dz3ZXj6A4AAAAAABJRU5ErkJggg==" alt="" style="position: absolute;" height="100px"></p>
+	<p>可以发现，隐匿节点被text-align弄到中间后，把后面的因为absolute而导致位置跟随的图片也推了过去。导致图片在中间靠右的地方。(虽然我们知道，直接对容器text-align而不对图片绝对定位就可以让图片居中，这里只是回顾一下绝对定位元素的特性)</p>
+	<br />
+	<br />
+	<p style="background-color: #ccc; line-height: 8px;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIoAAABXCAIAAABURUrCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKuSURBVHhe7doxcuowFIVhlZSUlCyBJVCyBEpKSnbAMlyyBEqWwTIoKSnJmfjiUcSYSYivdGTOVwU7mefRjyWZR7gLMeWhpjzUlIea8lBTHmrKQ015qCkPNeWhpjzUlIea8lBTHmrKQ015qCkPNeWhVibP6XRaLpeHw8FeS48yeWazWQhhMpnYa+mRO8/xeJzP52jTsqMP7V3VNI29/nhZ81wuF9wxViaE9XptJx66cvhht9vh9+3Ep8qaZ7vdtqMPaHO73ezEA5LYaWfIX8XKlykPZq14TsMUZyd+QrDNZmO/5KyKlS9TnnYv0FqtVna0H/otFgv7Azf2jxHLcYm4dWw8eua0nOI3ih0iluMSeUbker3adYSAhdCOEnMfL+y+bDyKjkiy+IGd4OZ7lfFTDtYSO1pCfAfDb9Y/Bo55kqecvt1aBvv93i6ini11yzFP/BBT6t2azGnPD8LkHPN080nB+ybZ0JfdNL7BK0/TNDYqRRdhuwKCDf17vMaue9uWmk+wwMTTmh2tjct1x48XRd6z8V4AqltyOsPnwUoznU5tYEq8bZ/b1DittYYfvmQ1tqO5xG1q3Askhs9jYxNC/seLkbUBxzz2Oov44wkYRxsYQ57k44nRtIG68yS7Z6h6I/Cs4jzxk2+r4McTTmrNg0erSj+E/pPhB7FbBs7nsx0a1POENqbZLDF8Hsz+Nmzfn94P+6W15JETRnnTdIbPg5vGRs4Z2lf0PzfvcVkh4u+zeRjT1vk1xwUcI+jxpbWRbZ1fc8wj/6c81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeYjd71+Dz3ZXj6A4AAAAAABJRU5ErkJggg==" alt=""  >xx嘿嘿</p>
+	<p>上述即为去掉空隙的一个办法</p>
+	<br />
+	<br />
+	<p style="background-color: #ccc; line-height: 300px;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIoAAABXCAIAAABURUrCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKuSURBVHhe7doxcuowFIVhlZSUlCyBJVCyBEpKSnbAMlyyBEqWwTIoKSnJmfjiUcSYSYivdGTOVwU7mefRjyWZR7gLMeWhpjzUlIea8lBTHmrKQ015qCkPNeWhpjzUlIea8lBTHmrKQ015qCkPNeWhVibP6XRaLpeHw8FeS48yeWazWQhhMpnYa+mRO8/xeJzP52jTsqMP7V3VNI29/nhZ81wuF9wxViaE9XptJx66cvhht9vh9+3Ep8qaZ7vdtqMPaHO73ezEA5LYaWfIX8XKlykPZq14TsMUZyd+QrDNZmO/5KyKlS9TnnYv0FqtVna0H/otFgv7Azf2jxHLcYm4dWw8eua0nOI3ih0iluMSeUbker3adYSAhdCOEnMfL+y+bDyKjkiy+IGd4OZ7lfFTDtYSO1pCfAfDb9Y/Bo55kqecvt1aBvv93i6ini11yzFP/BBT6t2azGnPD8LkHPN080nB+ybZ0JfdNL7BK0/TNDYqRRdhuwKCDf17vMaue9uWmk+wwMTTmh2tjct1x48XRd6z8V4AqltyOsPnwUoznU5tYEq8bZ/b1DittYYfvmQ1tqO5xG1q3Askhs9jYxNC/seLkbUBxzz2Oov44wkYRxsYQ57k44nRtIG68yS7Z6h6I/Cs4jzxk2+r4McTTmrNg0erSj+E/pPhB7FbBs7nsx0a1POENqbZLDF8Hsz+Nmzfn94P+6W15JETRnnTdIbPg5vGRs4Z2lf0PzfvcVkh4u+zeRjT1vk1xwUcI+jxpbWRbZ1fc8wj/6c81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeYjd71+Dz3ZXj6A4AAAAAABJRU5ErkJggg==" alt=""  ></p>
+	<p>由于vertical-align默认基线对齐，图片和隐匿节点的基线默认对齐了</p>
+	<br />
+	<br />
+	<p style="background-color: #ccc; line-height: 300px; text-align: center;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIoAAABXCAIAAABURUrCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKuSURBVHhe7doxcuowFIVhlZSUlCyBJVCyBEpKSnbAMlyyBEqWwTIoKSnJmfjiUcSYSYivdGTOVwU7mefRjyWZR7gLMeWhpjzUlIea8lBTHmrKQ015qCkPNeWhpjzUlIea8lBTHmrKQ015qCkPNeWhVibP6XRaLpeHw8FeS48yeWazWQhhMpnYa+mRO8/xeJzP52jTsqMP7V3VNI29/nhZ81wuF9wxViaE9XptJx66cvhht9vh9+3Ep8qaZ7vdtqMPaHO73ezEA5LYaWfIX8XKlykPZq14TsMUZyd+QrDNZmO/5KyKlS9TnnYv0FqtVna0H/otFgv7Azf2jxHLcYm4dWw8eua0nOI3ih0iluMSeUbker3adYSAhdCOEnMfL+y+bDyKjkiy+IGd4OZ7lfFTDtYSO1pCfAfDb9Y/Bo55kqecvt1aBvv93i6ini11yzFP/BBT6t2azGnPD8LkHPN080nB+ybZ0JfdNL7BK0/TNDYqRRdhuwKCDf17vMaue9uWmk+wwMTTmh2tjct1x48XRd6z8V4AqltyOsPnwUoznU5tYEq8bZ/b1DittYYfvmQ1tqO5xG1q3Askhs9jYxNC/seLkbUBxzz2Oov44wkYRxsYQ57k44nRtIG68yS7Z6h6I/Cs4jzxk2+r4McTTmrNg0erSj+E/pPhB7FbBs7nsx0a1POENqbZLDF8Hsz+Nmzfn94P+6W15JETRnnTdIbPg5vGRs4Z2lf0PzfvcVkh4u+zeRjT1vk1xwUcI+jxpbWRbZ1fc8wj/6c81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeagpDzXloaY81JSHmvJQUx5qykNNeYjd71+Dz3ZXj6A4AAAAAABJRU5ErkJggg==" alt=""  style="vertical-align: middle;"></p>
+	<p>当我们把图的vertical=align改为middle时，就可以大致居中了。（大致，是因为middle线并不就一定是中间）</p>
+	<br />
+	<br />
+	<p style="background-color: #ccc; line-height: 300px; text-align: center;"><span style="display: inline-block; line-height: normal; width: 500px; vertical-align: middle; text-align: left;">呵呵呵呵呵呵呵呵，呵呵呵呵呵。呵呵呵，呵呵呵呵呵，呵呵呵呵呵，呵呵呵呵呵呵呵，呵呵呵呵，呵呵呵呵呵，呵呵呵呵呵，呵呵，呵呵呵呵呵，呵呵呵呵呵。呵呵呵呵呵。呵呵呵呵。呵呵呵，呵呵呵呵呵，呵呵呵呵呵呵，呵呵呵呵。呵呵呵呵呵，呵呵呵呵呵呵呵呵。呵呵呵呵呵呵，呵呵呵，呵呵呵呵呵呵呵呵呵呵呵，呵呵呵，呵呵呵呵呵呵，呵呵呵呵呵。呵呵呵，呵呵呵，呵呵呵呵，呵呵呵呵呵呵呵呵呵。呵呵呵呵呵呵呵，呵呵呵呵，呵呵呵呵呵，呵呵呵呵呵，呵呵，呵呵呵呵呵，呵呵呵呵呵。呵呵呵呵呵。呵呵呵呵。呵呵呵，呵呵呵呵呵，呵呵呵呵呵呵，呵呵呵呵。呵呵呵呵呵呵呵，呵呵呵呵，呵呵呵呵呵，呵呵呵呵呵，呵呵，呵呵呵呵呵，呵呵呵呵呵。呵呵呵呵呵。呵呵呵呵。呵呵呵，呵呵呵呵呵，呵呵呵呵呵呵，呵呵呵呵。</span></p>
+
+
+</body>
+</html>
