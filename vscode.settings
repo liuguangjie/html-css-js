@@ -1,0 +1,19 @@
+/**用户配置*/
+user settings
+{
+    "files.autoSave": "afterDelay", //自动保存
+    "open-in-browser.default": "chrome",
+    "emmet.triggerExpansionOnTab": true,
+    "workbench.editor.enablePreview": false, //打开多个tab
+    "files.associations": {"*.js": "html"}, // emmet 打开快捷键 
+    "editor.autoIndent": false
+}
+
+
+
+/**扩展插件配置以及常用扩展插件*/
+extensions 
+
+['auto close tag','Auto Rename Tag', 'CSS Peek', 'HTML Snippets', 'Debugger for Chrome',
+'HTMLHint', 'open in browser', 'Vetur', 'vscode-fileheader' ]
+

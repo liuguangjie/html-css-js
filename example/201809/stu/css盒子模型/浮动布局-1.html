@@ -5,8 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>清除浮动布局</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 600px;
+        }
+        .container .header {
+            height: 100px;
+            background: black;
+        }
+        .container .buttom {
+            height: 100px;
+            margin-top: 10px;
+            background: black;
+        }
+        .main {
+            /* height: 400px; */
+            margin-top: 10px;
+            /* overflow: hidden; */
+        }
+        .main .main- con-l {
+            float: left;
+            width: 360px;
+            height: 400px;
+            background: orange;
+        }
+        .main .main-con-r {
+            float: right;
+            width: 230px;
+            height: 400px;
+            background: red;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            height: 0  ;
+            line-height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+        .clearfix {
+            zoom: 1;
+        }
+        
+    </style>
 </head>
 <body>
-    .con
+    <div class="container">
+        <div class="header clearfix"></div>
+        <div class="main">
+            <div class="main-con-l"></div>
+            <div class="main-con-r"></div>
+            <!-- <div style="clear: both;"></div> -->
+        </div>
+        <div class="buttom"></div>
+    </div>
 </body>
 </html>
