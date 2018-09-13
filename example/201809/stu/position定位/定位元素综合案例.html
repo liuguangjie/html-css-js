@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盒子的综合定位</title>
+
+    <style>
+        /**清除边距*/
+        body, ul, li, a {
+            margin: 0;
+            padding: 0;
+        }
+        /**清除样式*/
+        ul, li {
+            list-style: none;
+        }
+        
+        .nav {
+            width: 1259px;
+            height: 472px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .nav .nav-item {
+            width: 960px;
+            height: 60px; 
+            background: #333;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -480px;
+        }
+        .nav .a-item {
+            float: left;
+            display: inline-block;
+            color: #fff;
+            width: 160px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+        }
+        .nav .a-item:hover {
+            background: #fff;
+            color: #333;
+        }
+        .nav .no-item:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        .nav .nav-input-img {
+            position: absolute;
+            bottom: 56px;
+            left: 150px;
+        }
+
+        .nav .nav-sj-img {
+            position: absolute;
+            bottom: 47px;
+            left: 221px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-img">
+            <img src="sf.png" alt="">
+        </div>
+        <div class="nav-item">
+            <ul>
+				<li><a href="#" class="a-item no-item">运单查询</a></li>
+				<li><a href="#" class="a-item">运费查询</a></li>
+				<li><a href="#" class="a-item">时效查询</a></li>
+				<li><a href="#" class="a-item">服务网点查询</a></li>
+				<li><a href="#" class="a-item">收送范围查询</a></li>
+				<li><a href="#" class="a-item">客户专区</a></li>
+			</ul>
+        </div>
+        <div class="nav-input-img">
+            <img src="3.png" alt="">
+        </div>
+
+        <div class="nav-sj-img">
+            <img src="4.png" alt="">
+        </div>
+
+
+    </div>
+
+
+
+</body>
+</html>

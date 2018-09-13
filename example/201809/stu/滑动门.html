@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>滑动门的效果</title>
+    <style>
+        * {
+            margin: 0;padding: 0;
+        }
+        ul {list-style: none;}
+        /**第一个案例*/
+        .first {
+            display: inline-block;
+        }
+        .left {
+            float: left;
+            height: 100px;
+            width: 10px;
+            background: url(imgs/l.png) no-repeat;
+        }
+        .mid{
+            float: left;
+            height: 100px;
+            background: url(imgs/m.png);
+            line-height: 100px;
+        }
+        .right {
+            float: left;
+            height: 100px;
+            width: 10px;
+            background: url(imgs/r.png) no-repeat;
+        }
+        /**第二个列子*/
+        .too li {
+            float: left;
+            height: 35px;
+        
+        }
+        .too a {
+            display: inline-block;
+            height: 35px;
+            line-height: 35px;
+            padding-left: 7px; 
+            background: url(imgs/blue_r1_c1.png) no-repeat;
+            
+        }
+        .too span {
+            height: 35px;
+            background: url(imgs/blue_r1_c2.png) no-repeat right;
+            display: inline-block;
+            padding-right: 20px;
+        }
+        .too a:hover {
+            background: url(imgs/bg_r1_c1.png) no-repeat;
+        }
+        .too span:hover {
+            background: url(imgs/bg_r1_c2.png) no-repeat right;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="first">
+        <div class="left"></div>
+        <div class="mid">文字撑大的空间你好贱啊</div>
+        <div class="right"></div>
+    </div>
+
+    <hr>
+
+    <div class="too">
+        <ul >
+            <li><a href="#"><span>创造力</span></a></li>
+            <li><a href="#"><span>想象力</span></a></li>
+            <li><a href="#"><span>用户体验</span></a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
