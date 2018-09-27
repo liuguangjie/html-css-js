@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var songArr = [
+        //     {auther: '汪峰', name: '觉醒'},
+        //     {auther: '许巍', name: '道路'},
+        //     {auther: '金莎', name: '星月神话'}
+        // ];
+
+        // var songManager = {
+        //     // 添加歌曲
+        //     addSong : function(auther, name) {
+        //         songArr.push({auther: auther, name: name})
+        //     },
+        //     //删除歌曲
+        //     delSongByName : function(name) {
+        //         songArr = songArr || [];
+        //         for (var i = 0; i < songArr.length; i++) {
+        //             if (songArr[i]['name'] === name) {
+        //                 songArr.splice(i, 1);
+        //                 break;
+        //             }
+        //         }
+        //     },
+        //     //修改歌曲
+        //     updateSongByAuther : function(auther, name) {
+        //         songArr = songArr || [];
+        //         for (var i = 0; i < songArr.length; i++) {
+        //             if (songArr[i]['auther'] === auther) {
+        //                 songArr[i]['name'] = name;
+        //                 break;
+        //             }
+        //         }
+        //     },
+        //     querySongArr : function(name) {
+        //         var newArr = [];
+        //         songArr = songArr || [];
+        //         for (var i = 0; i < songArr.length; i++) {
+        //             if (songArr[i]['name'] === name) {
+        //                 newArr.push(songArr[i]);
+        //             }
+        //         }
+        //         return newArr;
+        //     }
+        // };
+
+        
+
+        function SongManager() {
+            this.songArr = [];
+        }
+
+        SongManager.prototype = {
+            constructor : SongManager,
+            init : function(songArr) {
+                this.songArr = songArr || [];
+            },
+            addSong : function(auther, name) {
+                this.songArr.push({auther: auther, name: name})
+            },
+            delSongByName : function(name) {
+                this.songArr = this.songArr || [];
+                for (var i = 0; i < this.songArr.length; i++) {
+                    if (this.songArr[i]['name'] === name) {
+                        this.songArr.splice(i, 1);
+                        break;
+                    }
+                }
+            },
+            //修改歌曲
+            updateSongByAuther : function(auther, name) {
+                songArr = this.songArr || [];
+                for (var i = 0; i < this.songArr.length; i++) {
+                    if (this.songArr[i]['auther'] === auther) {
+                        songArr[i]['name'] = name;
+                        break;
+                    }
+                }
+            },
+            querySongArr : function(name) {
+                var newArr = [];
+                this.songArr = this.songArr || [];
+                for (var i = 0; i < this.songArr.length; i++) {
+                    if (this.songArr[i]['name'] === name) {
+                        newArr.push(this.songArr[i]);
+                    }
+                }
+                return newArr;
+            }
+        };
+
+        
+        var songManager = new SongManager();
+        console.log(songManager.songArr);
+        songManager.addSong('张三', '好闪现');
+        console.log(songManager.songArr);
+        songManager.delSongByName('觉醒');
+        console.log(songManager.songArr);
+
+        songManager.updateSongByAuther('许巍', 'qqqq');
+        console.log(songManager.querySongArr('qqqq'));
+
+        function sum(num) {
+            if (num == 0) {
+                return 0;
+            }else {
+
+                return num + sum(--num); 
+            }
+
+        }
+
+        console.log(sum(100));
+
+    </script>
+</body>
+</html>

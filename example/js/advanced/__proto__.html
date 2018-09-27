@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person() {
+
+        }
+
+        var p = new Person();
+
+        /**
+        js 继承
+        https://www.cnblogs.com/humin/p/4556820.html
+        */
+
+        // 1.原型链继承
+        function Animal(){}
+        function Cat() {}
+        Cat.prototype = new Animal();
+        // 2.构造继承
+        function Cat(name){
+            Animal.call(this);
+        }
+        // 3.实列继承
+        function Cat(name){
+            var instance = new Animal();
+        }
+
+        // 4.拷贝继承
+        // function Cat(name){
+        //     var animal = new Animal();
+        //     for(var p in animal){
+        //         Cat.prototype[p] = animal[p];
+        //     }
+        //     Cat.prototype.name = name || 'Tom';
+        // }
+        // // 5.组合继承
+        // function Cat(name){
+        //     Animal.call(this);
+        //     this.name = name || 'Tom';
+        // }
+        // Cat.prototype = new Animal();
+        // // 6.寄生组合继承
+        // function Cat(name){
+        // Animal.call(this);
+        //     this.name = name || 'Tom';
+        // }
+        // (function(){
+        // // 创建一个没有实例方法的类
+        // var Super = function(){};
+        // Super.prototype = Animal.prototype;
+        // //将实例作为子类的原型
+        // Cat.prototype = new Super();
+        // })();
+        // function test() {
+        //     var max = arguments.length > 0 ? arguments[0] : 0;
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         if (arguments[i] > max) {
+        //             max = arguments[i];
+        //         }
+        //     }
+        //     return max;
+
+        // }
+
+        var test = function() {
+            var max = arguments.length > 0 ? arguments[0] : 0;
+            for (var i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+        console.log(test instanceof Array);
+        console.log(test(1, 2, 8, 9));
+
+        function testArr() {
+           this.arr = [1, 3, 4]; 
+        }
+
+        var t = new testArr();
+        console.log(t.propertyIsEnumerable('arr'));
+
+        var obj = {};
+        
+
+    </script>
+</body>
+</html>
