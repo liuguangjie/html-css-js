@@ -15,5 +15,8 @@ user settings
 extensions 
 
 ['auto close tag','Auto Rename Tag', 'CSS Peek', 'HTML Snippets', 'Debugger for Chrome',
-'HTMLHint', 'open in browser', 'Vetur', 'vscode-fileheader' ]
+'HTMLHint', 'open in browser', 'vscode-fileheader', 
+'Project Manager', 'vscode-icons', 'ASL', 'Code Runner',
+'C/C++'
+ ]
 
