@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function arrExt() {}
+
+        arrExt.prototype = new Array();
+
+        arrExt.prototype.see = function() {
+            console.log('xxxxxx');
+        }
+        console.log(Array.prototype);
+        console.log(arrExt.prototype);
+        var a = new arrExt();
+        a.push(1,2,3,4,5);
+        a.see();
+        console.log(a)
+        
+        var test = {
+            print(){
+                console.log('print()')
+            },
+            see(){
+                console.log('see()')
+            }
+        };
+
+        test.print();
+        test.see();
+
+        var obj = Object.create(test);
+
+        console.log(obj);
+    </script>
+</body>
+</html>

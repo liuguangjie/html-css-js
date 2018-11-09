@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* for (var i = 0; i < 10; i++) {
+
+            setTimeout((function(k) {
+
+                return function() {
+                    console.log(k);
+                };
+            })(i), 0);
+        } */
+        window.onload = function() {
+            
+            var divs = document.getElementsByTagName('div');
+            for (var i = 0; i < 10; i++) {
+                divs[i].onclick = (function(i) {
+                    return function() {
+                        alert('我是第' + (i + 1) + '个div');
+                    };
+                })(i);
+            }
+
+            function Person(name, age) {
+
+                var o = {
+                    name: name,
+                    age: age
+                };
+
+                return o;
+            }
+
+            var p = new Person('zhangsan', 11);
+            console.log(p);
+
+        }
+        
+    </script>
+
+    <div>我的第1个div</div>
+    <div>我的第2个div</div>
+    <div>我的第3个div</div>
+    <div>我的第4个div</div>
+    <div>我的第5个div</div>
+    <div>我的第6个div</div>
+    <div>我的第7个div</div>
+    <div>我的第8个div</div>
+    <div>我的第9个div</div>
+    <div>我的第10个div</div>
+</body>
+</html>
