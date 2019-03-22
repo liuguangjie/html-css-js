@@ -6,7 +6,8 @@ user settings
     "emmet.triggerExpansionOnTab": true,
     "workbench.editor.enablePreview": false, //打开多个tab
     "files.associations": {"*.js": "html"}, // emmet 打开快捷键 
-    "editor.autoIndent": false
+    "editor.autoIndent": false,
+    "files.autoGuessEncoding": true //解决 打开中文文件乱码问题
 }
 
 
