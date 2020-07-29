@@ -26,4 +26,5 @@ extensions
 editor.minimap.enabled 关闭右侧预览功能
 workbench.editor.showTabs  打开或关闭多个文件
 workbench.sideBar.location  文件目录放在右侧
-
+小程序的一些插件
+minapp  wechat-snippet  wxml
