@@ -27,4 +27,9 @@ editor.minimap.enabled 关闭右侧预览功能
 workbench.editor.showTabs  打开或关闭多个文件
 workbench.sideBar.location  文件目录放在右侧
 小程序的一些插件
-minapp  wechat-snippet  wxml
+minapp  wechat-snippet  wxml 
+1) vscode weapp api,  语法结构api;
+2) minapp-vscode
+3) vscode wxml
+4) vscode-wechat
+5) Easy WXLESS
