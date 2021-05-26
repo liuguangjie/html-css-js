@@ -18,7 +18,7 @@ extensions
 ['auto close tag','Auto Rename Tag', 'CSS Peek', 'HTML Snippets', 'Debugger for Chrome',
 'HTMLHint', 'open in browser', 'vscode-fileheader', 'Vue 2 Snippets'
 'Project Manager', 'vscode-icons', 'ASL', 'Code Runner', 'x86 and x86_64 Assembly','Dracula Official'
-'C/C++'
+'C/C++','Horla Light Theme', 'vetur'
  ]
 
 
